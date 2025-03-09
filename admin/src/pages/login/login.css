@@ -1,0 +1,88 @@
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0071c2, #005288);
+  font-family: "Arial", sans-serif;
+}
+
+.lContainer {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lContainer h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.lInput {
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.lInput:focus {
+  border-color: #0071c2;
+  box-shadow: 0 0 5px rgba(0, 113, 194, 0.5);
+}
+
+.lButton {
+  border: none;
+  padding: 12px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.lButton:disabled {
+  background-color: rgba(0, 113, 194, 0.5490196078);
+  cursor: not-allowed;
+}
+
+.lButton:hover:not(:disabled) {
+  background-color: #005288;
+  transform: scale(1.05);
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .lContainer {
+    padding: 20px;
+  }
+  .lContainer h2 {
+    font-size: 20px;
+  }
+  .lInput {
+    height: 35px;
+    font-size: 14px;
+  }
+  .lButton {
+    font-size: 14px;
+    padding: 10px;
+  }
+}/*# sourceMappingURL=login.css.map */

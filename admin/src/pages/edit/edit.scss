@@ -1,0 +1,191 @@
+.new {
+  width: 100%;
+  display: flex;
+
+  .newContainer {
+    flex: 6;
+
+    h1 {
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+    }
+
+    .top,
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left {
+        flex: 1;
+        text-align: center;
+
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .right {
+        flex: 2;
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: space-between;
+
+          .formInput {
+            width: 40%;
+
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-weight: 700;
+
+              .icon {
+                cursor: pointer;
+              }
+            }
+
+            input,
+            select {
+              width: 100%;
+              padding: 5px;
+              border: none;
+              border-bottom: 1px solid gray;
+            }
+
+            .password-container {
+              position: relative;
+              display: flex;
+              align-items: center;
+
+              input {
+                padding-right: 40px; // Đảm bảo đủ không gian cho biểu tượng mắt
+              }
+
+              .toggle-password {
+                position: absolute;
+                right: -4rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 18px;
+                color: teal;
+                transition: color 0.3s ease;
+
+                &:hover {
+                  color: rgb(34, 116, 116);
+                }
+              }
+            }
+
+            .error-message {
+              color: red;
+              font-size: 12px;
+              margin-top: 5px;
+            }
+          }
+
+          .btn-submit {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            background-color: teal;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+
+            &:hover {
+              background-color: rgb(34, 116, 116);
+            }
+          }
+        }
+      }
+    }
+
+    .seatingChart {
+      margin-top: 20px;
+    }
+
+    .seatingGrid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr); // 10 ghế mỗi hàng
+      gap: 5px;
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+    }
+
+    .seat {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .seat.economy {
+      background-color: #87ceeb; // Màu xanh
+    }
+
+    .seat.business {
+      background-color: #6a5acd; // Màu tím
+    }
+
+    .seat.first {
+      background-color: #ffcc00; // Màu vàng
+    }
+
+    .seat.occupied {
+      background-color: gray;
+      color: white;
+    }
+
+    .seat.add-seat {
+      background-color: #4caf50;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .seat.add-seat:hover {
+      background-color: #45a049;
+    }
+
+    .legend {
+      margin-top: 10px;
+      display: flex;
+      gap: 20px;
+      padding: 10px;
+      margin: 20px;
+
+      .legendItem {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .legendItem .seat {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+}

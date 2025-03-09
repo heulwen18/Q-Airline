@@ -1,0 +1,118 @@
+.modalDelayFlight {
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    &__container {
+        background: #fff;
+        width: 400px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    &__header {
+        background: #f5f5f5;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .closeButton {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #555;
+        }
+    }
+
+    &__body {
+        padding: 15px;
+        font-size: 16px;
+        color: #333;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="datetime-local"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+    }
+
+    &__footer {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+
+        .confirmButton {
+            background-color: #007bff;
+            border: none;
+            padding: 8px 12px;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+
+        .cancelButton {
+            background-color: #f44336;
+            border: none;
+            padding: 8px 12px;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+
+            &:hover {
+                background-color: #d32f2f;
+            }
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
