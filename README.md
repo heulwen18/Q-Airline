@@ -101,9 +101,6 @@ We are a team of three students from The VNU University of Engineering and Techn
 - Pham Mai Anh (The Faculty of Information Technology).
 - Vu Thi Ngoc Thanh (The Faculty of Information Technology).
 
-## Contact
-Email: 21020830@vnu.edu.vn/kiencv.3107@gmail.com
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
